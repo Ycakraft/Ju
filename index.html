@@ -12,14 +12,12 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            font-family:  sans-serif;
+            font-family: sans-serif;
             overflow: hidden;
-            
         }
         .buttons {
             display: flex;
             gap: 30px;
-           
         }
         button {
             padding: 10px 20px;
@@ -29,29 +27,30 @@
             border-radius: 15px;
             color: rgba(141, 0, 166, 0.505);
             background: lavender;
-            border-color: white ;
+            border-color: white;
         }
-        h1{
+        h1 {
             color: rgba(255, 255, 0, 0.642);
-            align-items: center;
+            text-align: center;
         }
-        p{
+        p {
             font-size: 25px;
-            font-family: sans-serif;
             color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Me passa seu numero <br> segundo vamos correr terça ? </h1>
+    <h1>Vamos correr terça e um açai de pós ?</h1>
     <div class="buttons">
-        <button onclick="responder('Sim')">Sim</button>
+        <button onclick="abrirWhatsApp()">Sim</button>
         <button id="nao" onclick="fugir()">Não</button>
     </div>
     <p id="resposta"></p>
     <script>
-        function responder(resposta) {
-            document.getElementById('resposta').textContent = "Escolheu certinho jubisnaguinha " ;
+        function abrirWhatsApp() {
+            let numero = "seu_numero_aqui"; 
+            let url = `https://wa.me/${974102267}?text=Oi,%20vamos%20correr%20terça`;
+            window.location.href = url;
         }
 
         function fugir() {
